@@ -1,11 +1,11 @@
-package com.ganeshPolaki.Product_Service.model;
+package com.microservice.inventory.model;
+
+import org.springframework.data.annotation.Id;
+
 
 import java.math.BigDecimal;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(value="prduct")
 public class Product {
 	
 	@Id 

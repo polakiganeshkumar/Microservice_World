@@ -9,8 +9,8 @@ import com.ganeshPolaki.Product_Service.model.Product;
 @Service
 public class ProductService {
 
-	public void saveProduct(Product product) {
-		// TODO Auto-generated method stub
+	public Product saveProduct(Product product) {
+		return product;
 		
 	}
 

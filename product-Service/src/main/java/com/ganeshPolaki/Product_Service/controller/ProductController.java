@@ -30,9 +30,9 @@ public class ProductController {
 	private ProductService  service;
 	
 	@PostMapping
-	@ResponseStatus(HttpStatus.CREATED)
+	//@ResponseStatus(HttpStatus.CREATED)
 	public ResponseEntity<Product> createProduct(@RequestBody Product product) {
-		
+		System.out.println(product);
 		service.saveProduct(product);
 		return ResponseEntity.status(200).body(product);
 	}
