@@ -38,23 +38,4 @@ public class InventoryService {
                             .build();
                 }).collect(Collectors.toList());
     }
-
-    public String hitThirdPartyApi(){
-        Product req=new Product();
-        req.setId("12");
-        req.setName("ganesh Polaki");
-        req.setDiscription("polaki ganesh den");
-        req.setPrice(new BigDecimal(0023));
-
-        HttpHeaders headers=new HttpHeaders();
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-
-        HttpEntity<Product> entity=new HttpEntity<Product>(req,headers);
-
-        ResponseEntity<Product> response = restTemplate.exchange("http://localhost:8080/api/product", HttpMethod.POST,entity, Product.class);
-
-       System.out.println(response);
-        return  "I did It now!!";
-    }
-
 }

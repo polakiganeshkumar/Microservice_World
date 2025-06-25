@@ -30,9 +30,4 @@ public class InventoryController {
         return inventoryService. isInStock(skucode);
     }
 
-    @PostMapping("/thirParty")
-    public ResponseEntity<?> getThirpartyCall(@RequestBody String str){
-        return ResponseEntity.status(HttpStatus.OK).body( inventoryService.hitThirdPartyApi());
-    }
-
 }
